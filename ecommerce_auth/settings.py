@@ -44,14 +44,14 @@ INSTALLED_APPS = [
 ]
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME' : timedelta(minutes=20),
-    'REFRESH_TOKEN_LIFETIME' : timedelta(days=1),
-    'ROTATE_REFRESH_TOKENS' : False,
-    'BLACKLIST_AFTER_ROTATION' : False,
-    'UPDATE_LAST_LOGIN' : True,
-    'ALGORITHM' : 'HS256',
-    'USER_ID_FIELD' : 'id',
-    'USER_ID_CLAIM' : 'user_id',
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=20),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+    'ROTATE_REFRESH_TOKENS': False,
+    'BLACKLIST_AFTER_ROTATION': False,
+    'UPDATE_LAST_LOGIN': True,
+    'ALGORITHM': 'HS256',
+    'USER_ID_FIELD': 'id',
+    'USER_ID_CLAIM': 'user_id',
 }
 
 MIDDLEWARE = [
@@ -66,12 +66,12 @@ MIDDLEWARE = [
 
 
 REST_FRAMEWORK = {
-	'DEFAULT_PERMISSION_CLASSES': (
-		'rest_framework.permissions.AllowAny',
-	),
-	'DEFAULT_AUTHENTICATION_CLASSES': (
-		'rest_framework_simplejwt.authentication.JWTAuthentication',
-	)
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
 }
 
 AUTH_USER_MODEL = 'user.User'
@@ -102,13 +102,13 @@ WSGI_APPLICATION = 'ecommerce_auth.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE'   : 'django.db.backends.postgresql_psycopg2',
-        'NAME'     : 'd7bg611u5n0ts2',
-        'USER'     : 'zkjbjmcpabcyup',
-        'PASSWORD' : '5a4b92946cfe7845404ffc7f80eed0c567c1bbeb54d7b17efde4af0e2994d5eb',
-        'HOST'     : 'ec2-3-209-226-234.compute-1.amazonaws.com',
-        'PORT'     : '5432',
-    }   
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd7bg611u5n0ts2',
+        'USER': 'zkjbjmcpabcyup',
+        'PASSWORD': '5a4b92946cfe7845404ffc7f80eed0c567c1bbeb54d7b17efde4af0e2994d5eb',
+        'HOST': 'ec2-3-209-226-234.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
 }
 
 # Password validation
