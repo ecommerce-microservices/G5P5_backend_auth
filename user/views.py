@@ -30,7 +30,6 @@ class UserAPIView(views.APIView):
 
 # User Detail View
 
-
 class UserDetailView(generics.RetrieveAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
@@ -56,21 +55,20 @@ class UserDeleteView(generics.DestroyAPIView):
 
 # Verify Token View
 
-
-class VerifyTokenView(TokenVerifyView):
-    def post(self, request, *args, **kwargs):
-        serializer = TokenVerifySerializer(data=request.data)
-        token_backend = TokenBackend(
-            algorithm=settings.SIMPLE_JWT['ALGORITHM'])
-
-        try:
-            serializer.is_valid(raise_exception=True)
-            token_data = token_backend.decode(
-                request.data['token'], verify=False)
-            serializer.validated_data['user_id'] = token_data['user_id']
-        except TokenError as e:
-            raise InvalidToken(e.args[0])
-        except Exception as e:
-            print(e)
-
-        return Response(serializer.validated_data, status=status.HTTP_200_OK)
+#class VerifyTokenView(TokenVerifyView):
+#    def post(self, request, *args, **kwargs):
+#        serializer = TokenVerifySerializer(data=request.data)
+#        token_backend = TokenBackend(
+#            algorithm=settings.SIMPLE_JWT['ALGORITHM'])
+#
+#        try:
+#            serializer.is_valid(raise_exception=True)
+#            token_data = token_backend.decode(
+#                request.data['token'], verify=False)
+#            serializer.validated_data['user_id'] = token_data['user_id']
+#        except TokenError as e:
+#            raise InvalidToken(e.args[0])
+#        except Exception as e:
+#            print(e)
+#
+#        return Response(serializer.validated_data, status=status.HTTP_200_OK)
