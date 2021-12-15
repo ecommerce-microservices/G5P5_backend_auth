@@ -28,7 +28,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title="Documentación de API",
         default_version='v1',
-        description="Documentación de API de autenticación para el proyecto e-commerce MisionTic2022 - UNAL<br> <strong>Ciclo 4 P5 - Grupo 5.</strong>",
+        description="Documentación de API de autenticación para el proyecto e-commerce MisionTic2022 <br> <strong>Ciclo 4 P5 - Grupo 5.</strong>",
         terms_of_service="https://www.google.com/policies/terms/",
         contact=openapi.Contact(email="cdgonzalezab@gmail.com"),
         license=openapi.License(name="BSD License"),
