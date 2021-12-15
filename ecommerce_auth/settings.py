@@ -103,10 +103,10 @@ WSGI_APPLICATION = 'ecommerce_auth.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ddsj3g17qidku9',
-        'USER': 'ljhqzzmwqeyqgg',
-        'PASSWORD': '6f52f083a68e6268b512199b30f35be7d0c2af61c225b01de7e79acada7b3b4a',
-        'HOST': 'ec2-54-147-107-18.compute-1.amazonaws.com',
+        'NAME': 'auth_ms',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
